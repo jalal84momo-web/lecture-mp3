@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lecture MP3 Pro</string>
+
+    <!-- Navigation -->
+    <string name="nav_songs">Songs</string>
+    <string name="nav_albums">Albums</string>
+    <string name="nav_artists">Artists</string>
+    <string name="nav_genres">Genres</string>
+    <string name="nav_folders">Folders</string>
+    <string name="nav_playlists">Playlists</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_recently_played">Recently Played</string>
+    <string name="nav_recently_added">Recently Added</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Player Controls -->
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="repeat">Repeat</string>
+    <string name="queue">Queue</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="sleep_timer">Sleep Timer</string>
+    <string name="lyrics">Lyrics</string>
+
+    <!-- Settings -->
+    <string name="settings_theme">Theme</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_playback">Playback</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_storage">Storage</string>
+    <string name="settings_backup">Backup</string>
+    <string name="settings_restore">Restore</string>
+    <string name="settings_about">About</string>
+
+    <!-- Theme Options -->
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System</string>
+    <string name="theme_dynamic">Dynamic Color</string>
+
+    <!-- Language Options -->
+    <string name="language_english">English</string>
+    <string name="language_arabic">العربية</string>
+
+    <!-- Messages -->
+    <string name="no_songs">No songs found</string>
+    <string name="no_albums">No albums found</string>
+    <string name="no_artists">No artists found</string>
+    <string name="no_genres">No genres found</string>
+    <string name="no_playlists">No playlists found</string>
+    <string name="loading">Loading...</string>
+    <string name="scanning_audio">Scanning audio files...</string>
+    <string name="scan_complete">Scan complete</string>
+
+    <!-- Dialogs -->
+    <string name="create_playlist">Create Playlist</string>
+    <string name="add_to_playlist">Add to Playlist</string>
+    <string name="delete_playlist">Delete Playlist</string>
+    <string name="rename_playlist">Rename Playlist</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="add_favorite">Add to Favorites</string>
+    <string name="remove_favorite">Remove from Favorites</string>
+
+    <!-- Permissions -->
+    <string name="permission_storage_title">Storage Permission</string>
+    <string name="permission_storage_message">This app needs permission to access your audio files</string>
+    <string name="permission_notification_title">Notification Permission</string>
+    <string name="permission_notification_message">This app sends notifications for playback controls</string>
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+
+    <!-- Errors -->
+    <string name="error_playing_file">Error playing file</string>
+    <string name="error_loading_library">Error loading library</string>
+    <string name="error_network">Network error</string>
+</resources>

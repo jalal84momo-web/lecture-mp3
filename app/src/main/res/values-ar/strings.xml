@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lecture MP3 Pro</string>
+
+    <!-- Navigation -->
+    <string name="nav_songs">الأغاني</string>
+    <string name="nav_albums">الألبومات</string>
+    <string name="nav_artists">الفنانين</string>
+    <string name="nav_genres">الأنواع</string>
+    <string name="nav_folders">المجلدات</string>
+    <string name="nav_playlists">قوائم التشغيل</string>
+    <string name="nav_favorites">المفضلة</string>
+    <string name="nav_recently_played">تم تشغيله مؤخراً</string>
+    <string name="nav_recently_added">تمت إضافته مؤخراً</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <!-- Player Controls -->
+    <string name="play">تشغيل</string>
+    <string name="pause">إيقاف</string>
+    <string name="next">التالي</string>
+    <string name="previous">السابق</string>
+    <string name="shuffle">الخلط العشوائي</string>
+    <string name="repeat">إعادة</string>
+    <string name="queue">قائمة الانتظار</string>
+    <string name="equalizer">معادل الصوت</string>
+    <string name="sleep_timer">مؤقت النوم</string>
+    <string name="lyrics">كلمات الأغنية</string>
+
+    <!-- Settings -->
+    <string name="settings_theme">المظهر</string>
+    <string name="settings_language">اللغة</string>
+    <string name="settings_playback">التشغيل</string>
+    <string name="settings_notifications">الإشعارات</string>
+    <string name="settings_storage">التخزين</string>
+    <string name="settings_backup">النسخة الاحتياطية</string>
+    <string name="settings_restore">الاستعادة</string>
+    <string name="settings_about">حول التطبيق</string>
+
+    <!-- Theme Options -->
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="theme_system">النظام</string>
+    <string name="theme_dynamic">الألوان الديناميكية</string>
+
+    <!-- Language Options -->
+    <string name="language_english">English</string>
+    <string name="language_arabic">العربية</string>
+
+    <!-- Messages -->
+    <string name="no_songs">لم يتم العثور على أغاني</string>
+    <string name="no_albums">لم يتم العثور على ألبومات</string>
+    <string name="no_artists">لم يتم العثور على فنانين</string>
+    <string name="no_genres">لم يتم العثور على أنواع</string>
+    <string name="no_playlists">لم يتم العثور على قوائم تشغيل</string>
+    <string name="loading">جاري التحميل...</string>
+    <string name="scanning_audio">جاري مسح ملفات الصوت...</string>
+    <string name="scan_complete">اكتمل المسح</string>
+
+    <!-- Dialogs -->
+    <string name="create_playlist">إنشاء قائمة تشغيل</string>
+    <string name="add_to_playlist">إضافة إلى قائمة التشغيل</string>
+    <string name="delete_playlist">حذف قائمة التشغيل</string>
+    <string name="rename_playlist">إعادة تسمية قائمة التشغيل</string>
+    <string name="confirm">تأكيد</string>
+    <string name="cancel">إلغاء</string>
+    <string name="delete">حذف</string>
+    <string name="add_favorite">إضافة إلى المفضلة</string>
+    <string name="remove_favorite">إزالة من المفضلة</string>
+
+    <!-- Permissions -->
+    <string name="permission_storage_title">إذن التخزين</string>
+    <string name="permission_storage_message">يحتاج هذا التطبيق إلى إذن للوصول إلى ملفات الصوت الخاصة بك</string>
+    <string name="permission_notification_title">إذن الإشعار</string>
+    <string name="permission_notification_message">يرسل هذا التطبيق إشعارات للتحكم في التشغيل</string>
+    <string name="allow">السماح</string>
+    <string name="deny">الرفض</string>
+
+    <!-- Errors -->
+    <string name="error_playing_file">خطأ في تشغيل الملف</string>
+    <string name="error_loading_library">خطأ في تحميل المكتبة</string>
+    <string name="error_network">خطأ في الشبكة</string>
+</resources>
