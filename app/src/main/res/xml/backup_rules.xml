@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Backup rules for app data -->
-    <PreferenceCategory android:title="Backup">
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="backup_enabled"
-            android:title="Backup App Data" />
-    </PreferenceCategory>
-</PreferenceScreen>
+<full-backup-content>
+    <!-- Exclude files that should not be backed up -->
+    <exclude domain="sharedpref" path="com.lecturempo3pro_preferences.xml" />
+    <exclude domain="cache" />
+    <exclude domain="files" path="exofiles" />
+</full-backup-content>

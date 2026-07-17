@@ -1,87 +1,96 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# signingConfig property in the build type below.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+-dontusemixedcaseclassnames
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
--keepattributes SourceFile,LineNumberTable
-
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
--renamesourcefileattribute SourceFile
-
-# Kotlin
--keep class kotlin.Metadata { *; }
--keepclassmembers class **$WhenMappings {
-    <fields>;
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembernames class * {
+    native <methods>;
 }
 
-# Coroutines
--keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
--keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
--keepclassmembernames class kotlinx.** {
-    volatile <fields>;
+# keep setters in Views so that animations can still work.
+# see http://proguard.sourceforge.net/manual/examples.html#beans
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);  
+   *** get*();
 }
 
-# Compose
--keep class androidx.compose.** { *; }
-
-# Room
--keep class * extends androidx.room.RoomDatabase
--keep @androidx.room.Entity class *
--dontwarn androidx.room.paging.util.fetchersAsync*
-
-# Hilt
--keep class * extends dagger.hilt.android.internal.managers.ViewComponentManager$ViewBindingComponent
--keep class dagger.hilt.android.internal.** { *; }
--keep class dagger.hilt.** { *; }
--keepclasseswithmembers class * {
-    @dagger.hilt.android.lifecycle.HiltViewModel <init>(...);
+# We want to keep methods in Activity that could be used in the XML attribute onClick
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
 }
 
-# Media3
--keep class androidx.media3.** { *; }
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
 
-# Firebase
--keep class com.firebase.** { *; }
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# The support library contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version.  We know about them, and they are safe.
+-dontwarn androidx.**
+
+# Keep Hilt annotations
+-keep class com.google.dagger.hilt.** { *; }
+-keep @dagger.hilt.** class * { *; }
+-keepclassmembers,allowobfuscation @interface com.google.dagger.hilt.** {
+  <methods>;
+}
+
+# Keep Room classes
+-keep class androidx.room.** { *; }
+-dontwarn androidx.room.**
+
+# Keep Firebase
 -keep class com.google.firebase.** { *; }
--keepnames class com.google.android.gms.internal.** { *; }
+-dontwarn com.google.firebase.**
 
-# Google Mobile Ads
--keep class com.google.android.gms.ads.** { *; }
--keep class com.google.android.gms.common.** { *; }
+# Keep Timber
+-keep class timber.log.** { *; }
 
-# Google UMP
--keep class com.google.android.ump.** { *; }
-
-# OkHttp
--dontwarn okhttp3.**
--dontwarn okio.**
--dontwarn javax.annotation.**
--dontwarn org.conscrypt.**
--dontwarn org.bouncycastle.**
--dontwarn org.openjsse.**
-
-# Retrofit
--keepattributes Signature
--keepattributes *Annotation*
+# Keep Retrofit
 -keep class retrofit2.** { *; }
--keepclasseswithmembers class * {
-    @retrofit2.http.<HTTP>* <methods>;
-}
+-dontwarn retrofit2.**
 
-# Coil
+# Keep OkHttp
+-keep class okhttp3.** { *; }
+-dontwarn okhttp3.**
+
+# Keep Moshi
+-keep class com.squareup.moshi.** { *; }
+-dontwarn com.squareup.moshi.**
+
+# Keep Coil
 -keep class coil.** { *; }
+-dontwarn coil.**
 
-# Timber
--dontwarn timber.io.BuildConfig
+# Keep Media3
+-keep class androidx.media3.** { *; }
+-dontwarn androidx.media3.**
+
+# Keep Google Mobile Ads
+-keep class com.google.android.gms.ads.** { *; }
+-dontwarn com.google.android.gms.ads.**
+
+# Keep serializable objects
+-keepnames class * implements java.io.Serializable
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    !static !transient <fields>;
+    !private <fields>;
+    !private <methods>;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
