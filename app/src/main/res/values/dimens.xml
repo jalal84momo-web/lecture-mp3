@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_xxl">32dp</dimen>
+
+    <!-- Corner Radius -->
+    <dimen name="corner_radius_sm">4dp</dimen>
+    <dimen name="corner_radius_md">8dp</dimen>
+    <dimen name="corner_radius_lg">12dp</dimen>
+    <dimen name="corner_radius_xl">16dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_xs">16dp</dimen>
+    <dimen name="icon_size_sm">24dp</dimen>
+    <dimen name="icon_size_md">32dp</dimen>
+    <dimen name="icon_size_lg">48dp</dimen>
+    <dimen name="icon_size_xl">64dp</dimen>
+
+    <!-- Button Sizes -->
+    <dimen name="button_height_sm">36dp</dimen>
+    <dimen name="button_height_md">44dp</dimen>
+    <dimen name="button_height_lg">56dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_xs">12sp</dimen>
+    <dimen name="text_sm">14sp</dimen>
+    <dimen name="text_md">16sp</dimen>
+    <dimen name="text_lg">18sp</dimen>
+    <dimen name="text_xl">20sp</dimen>
+    <dimen name="text_xxl">24sp</dimen>
+
+    <!-- Album Art Sizes -->
+    <dimen name="album_art_small">120dp</dimen>
+    <dimen name="album_art_medium">200dp</dimen>
+    <dimen name="album_art_large">300dp</dimen>
+</resources>

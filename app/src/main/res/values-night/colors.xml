@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors (Dark Mode) -->
+    <color name="primary">#BB86FC</color>
+    <color name="primary_dark">#6200EE</color>
+    <color name="primary_darker">#3700B3</color>
+    <color name="primary_light">#BB86FC</color>
+
+    <!-- Secondary Colors (Dark Mode) -->
+    <color name="secondary">#03DAC6</color>
+    <color name="secondary_dark">#03DAC6</color>
+    <color name="secondary_light">#66FFF9</color>
+
+    <!-- Accent Colors (Dark Mode) -->
+    <color name="accent">#FF0266</color>
+    <color name="accent_light">#FF6B9D</color>
+
+    <!-- Background & Surface (Dark Mode) -->
+    <color name="background">#121212</color>
+    <color name="background_dark">#121212</color>
+    <color name="surface">#1F1F1F</color>
+    <color name="surface_variant">#2C2C2C</color>
+
+    <!-- Text Colors (Dark Mode) -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#BDBDBD</color>
+    <color name="text_tertiary">#757575</color>
+    <color name="text_inverse">#000000</color>
+
+    <!-- Status Colors (Dark Mode) -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="error">#CF6679</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Neutral Colors (Dark Mode) -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Overlay Colors (Dark Mode) -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="overlay_light">#80FFFFFF</color>
+</resources>

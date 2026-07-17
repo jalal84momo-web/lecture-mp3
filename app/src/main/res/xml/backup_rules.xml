@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Backup rules for app data -->
+    <PreferenceCategory android:title="Backup">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="backup_enabled"
+            android:title="Backup App Data" />
+    </PreferenceCategory>
+</PreferenceScreen>

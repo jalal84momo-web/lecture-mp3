@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme_entries">
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+        <item>@string/theme_system</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>light</item>
+        <item>dark</item>
+        <item>system</item>
+    </string-array>
+
+    <string-array name="language_entries">
+        <item>@string/language_english</item>
+        <item>@string/language_arabic</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>en</item>
+        <item>ar</item>
+    </string-array>
+
+    <string-array name="repeat_entries">
+        <item>Repeat All</item>
+        <item>Repeat One</item>
+        <item>Repeat Off</item>
+    </string-array>
+
+    <string-array name="repeat_values">
+        <item>repeat_all</item>
+        <item>repeat_one</item>
+        <item>repeat_off</item>
+    </string-array>
+</resources>

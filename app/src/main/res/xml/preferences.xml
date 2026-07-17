@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/settings_theme">
+        <ListPreference
+            android:defaultValue="system"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:key="theme_preference"
+            android:title="@string/settings_theme" />
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="dynamic_color"
+            android:title="@string/theme_dynamic" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_language">
+        <ListPreference
+            android:defaultValue="en"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:key="language_preference"
+            android:title="@string/settings_language" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_playback">
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="shuffle_preference"
+            android:title="@string/shuffle" />
+        <ListPreference
+            android:defaultValue="repeat_all"
+            android:entries="@array/repeat_entries"
+            android:entryValues="@array/repeat_values"
+            android:key="repeat_preference"
+            android:title="@string/repeat" />
+        <SeekBarPreference
+            android:defaultValue="100"
+            android:key="playback_speed"
+            android:max="200"
+            android:title="Playback Speed" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_notifications">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="show_notifications"
+            android:title="@string/settings_notifications" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_storage">
+        <Preference
+            android:key="clear_cache"
+            android:title="Clear Cache" />
+        <Preference
+            android:key="storage_location"
+            android:title="@string/settings_storage" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_about">
+        <Preference
+            android:key="app_version"
+            android:title="Version"
+            android:summary="1.0.0" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
