@@ -5,7 +5,6 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import androidx.room.Update
 import com.lecturempo3pro.data.local.entity.PlaylistEntity
 import kotlinx.coroutines.flow.Flow
 
@@ -14,13 +13,13 @@ interface PlaylistDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertPlaylist(playlist: PlaylistEntity): Long
 
-    @Update
-    suspend fun updatePlaylist(playlist: PlaylistEntity)
+    @Query("UPDATE playlists SET name = :name, modified_at = :modifiedAt WHERE id = :id")
+    suspend fun updatePlaylist(id: Long, name: String, modifiedAt: Long)
 
     @Delete
     suspend fun deletePlaylist(playlist: PlaylistEntity)
 
-    @Query("SELECT * FROM playlists ORDER BY modified_at DESC")
+    @Query("SELECT * FROM playlists ORDER BY created_at DESC")
     fun getAllPlaylists(): Flow<List<PlaylistEntity>>
 
     @Query("SELECT * FROM playlists WHERE id = :playlistId")

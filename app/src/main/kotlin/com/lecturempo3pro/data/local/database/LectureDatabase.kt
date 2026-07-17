@@ -30,16 +30,19 @@ abstract class LectureDatabase : RoomDatabase() {
     abstract fun recentlyPlayedDao(): RecentlyPlayedDao
 
     companion object {
-        private const val DB_NAME = "lecture_mp3_pro.db"
+        @Volatile
+        private var instance: LectureDatabase? = null
 
         fun getDatabase(context: Context): LectureDatabase {
-            return Room.databaseBuilder(
-                context.applicationContext,
-                LectureDatabase::class.java,
-                DB_NAME
-            )
-                .fallbackToDestructiveMigration()
-                .build()
+            return instance ?: synchronized(this) {
+                val newInstance = Room.databaseBuilder(
+                    context.applicationContext,
+                    LectureDatabase::class.java,
+                    "lecture_database"
+                ).build()
+                instance = newInstance
+                newInstance
+            }
         }
     }
 }

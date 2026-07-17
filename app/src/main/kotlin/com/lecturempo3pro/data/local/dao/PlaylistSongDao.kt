@@ -1,6 +1,7 @@
 package com.lecturempo3pro.data.local.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -15,8 +16,8 @@ interface PlaylistSongDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertPlaylistSongs(playlistSongs: List<PlaylistSongEntity>)
 
-    @Query("DELETE FROM playlist_songs WHERE id = :id")
-    suspend fun deletePlaylistSong(id: Long)
+    @Delete
+    suspend fun deletePlaylistSong(playlistSong: PlaylistSongEntity)
 
     @Query("SELECT * FROM playlist_songs WHERE playlist_id = :playlistId ORDER BY position ASC")
     fun getPlaylistSongs(playlistId: Long): Flow<List<PlaylistSongEntity>>
