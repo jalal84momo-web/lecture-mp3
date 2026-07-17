@@ -1,0 +1,141 @@
+[versions]
+android_sdk_compile = "34"
+android_sdk_target = "34"
+android_sdk_min = "26"
+
+# Kotlin
+kotlin = "1.9.21"
+kotlinx_coroutines = "1.7.3"
+kotlinx_serialization = "1.6.1"
+
+# Android & Jetpack
+androidx_core = "1.12.0"
+androidx_appcompat = "1.6.1"
+androidx_compose_bom = "2023.12.00"
+androidx_activity = "1.8.1"
+androidx_lifecycle = "2.6.2"
+androidx_navigation = "2.7.5"
+androidx_room = "2.6.1"
+androidx_datastore = "1.0.0"
+androidx_work = "2.8.1"
+androidx_hilt_navigation = "1.1.0"
+
+# Material Design
+material3 = "1.1.2"
+
+# Media
+media3 = "1.2.0"
+
+# Networking & Serialization
+retrofit = "2.11.0"
+okhttp = "4.12.0"
+kotlinx_json = "1.6.1"
+
+# Dependency Injection
+hilt = "2.48"
+
+# Image Loading
+coil = "2.5.0"
+
+# Logging
+timber = "5.0.1"
+
+# Firebase
+firebase_bom = "32.7.0"
+
+# Google Mobile Ads & UMP
+google_mobile_ads = "22.6.0"
+google_ump = "2.1.0"
+
+# Testing
+junit = "4.13.2"
+androidx_junit = "1.1.5"
+androidx_espresso = "3.5.1"
+
+# Lint
+lint_gradle = "31.2.0"
+
+[libraries]
+# Kotlin
+kotlin_stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+kotlinx_coroutines_core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx_coroutines" }
+kotlinx_coroutines_android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinx_coroutines" }
+kotlinx_serialization_json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx_serialization" }
+
+# Android Core
+androidx_core = { group = "androidx.core", name = "core-ktx", version.ref = "androidx_core" }
+androidx_appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx_appcompat" }
+
+# Compose
+androidx_compose_bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx_compose_bom" }
+androidx_compose_ui = { group = "androidx.compose.ui", name = "ui" }
+androidx_compose_ui_graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx_compose_ui_preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx_compose_ui_tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx_compose_ui_test_manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx_compose_material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+androidx_compose_material3_window_size = { group = "androidx.compose.material3", name = "material3-window-size-class", version.ref = "material3" }
+androidx_activity_compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx_activity" }
+
+# Lifecycle & ViewModel
+androidx_lifecycle_runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx_lifecycle" }
+androidx_lifecycle_viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidx_lifecycle" }
+androidx_lifecycle_runtime_compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx_lifecycle" }
+
+# Navigation
+androidx_navigation_compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidx_navigation" }
+androidx_hilt_navigation_compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidx_hilt_navigation" }
+
+# Room
+androidx_room_runtime = { group = "androidx.room", name = "room-runtime", version.ref = "androidx_room" }
+androidx_room_compiler = { group = "androidx.room", name = "room-compiler", version.ref = "androidx_room" }
+androidx_room_ktx = { group = "androidx.room", name = "room-ktx", version.ref = "androidx_room" }
+
+# DataStore
+androidx_datastore_preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "androidx_datastore" }
+
+# WorkManager
+androidx_work_runtime = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "androidx_work" }
+
+# Media3
+media3_exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "media3" }
+media3_exoplayer_hls = { group = "androidx.media3", name = "media3-exoplayer-hls", version.ref = "media3" }
+media3_session = { group = "androidx.media3", name = "media3-session", version.ref = "media3" }
+media3_ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3" }
+
+# Hilt
+hilt_android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt_compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+
+# Image Loading
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil_compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+
+# Logging
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+# Firebase
+firebase_bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase_bom" }
+firebase_analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebase_crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+
+# Google Mobile Ads
+google_mobile_ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "google_mobile_ads" }
+
+# Google UMP
+google_ump = { group = "com.google.android.ump", name = "user-messaging-platform", version.ref = "google_ump" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx_junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx_junit" }
+androidx_espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx_espresso" }
+androidx_compose_ui_test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+[plugins]
+android_application = { id = "com.android.application", version = "8.2.0" }
+android_library = { id = "com.android.library", version = "8.2.0" }
+kotlin_android = { id = "org.jetbrains.kotlin.android", version = "1.9.21" }
+kotlin_serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version = "1.9.21" }
+hilt_android = { id = "com.google.hilt.android", version = "2.48" }
+google_services = { id = "com.google.gms.google-services", version = "4.4.0" }
+firebase_crashlytics = { id = "com.google.firebase.crashlytics", version = "2.9.10" }
